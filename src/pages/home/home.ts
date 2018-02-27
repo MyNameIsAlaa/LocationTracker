@@ -11,4 +11,9 @@ export class HomePage {
 
   }
 
+
+  showAlert(){
+   console.log('hello!');
+  }
+
 }
