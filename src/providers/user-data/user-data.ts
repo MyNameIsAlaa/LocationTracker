@@ -32,6 +32,10 @@ export class UserDataProvider {
     this.db.list('/locations/').push(item);
   }
 
+  EditLocation(key:string, item:any){
+    this.db.list('/locations/').update(key,item);
+  }
+
   
 
 }

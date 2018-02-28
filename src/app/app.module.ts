@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { AddLocationPage } from '../pages/add-location/add-location';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { EditLocationPage } from '../pages/edit-location/edit-location';
 import { AuthProvider } from '../providers/auth/auth';
 
 import { AngularFirestore } from 'angularfire2/firestore';
@@ -46,7 +47,8 @@ const firebaseConfig = {
     HomePage,
     AddLocationPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    EditLocationPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ const firebaseConfig = {
     HomePage,
     AddLocationPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    EditLocationPage
   ],
   providers: [
     StatusBar,

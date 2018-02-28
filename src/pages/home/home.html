@@ -8,7 +8,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item text-wrap *ngFor="let location of locations">
+    <ion-item text-wrap *ngFor="let location of locations | async"  (click)="goEdit(location)">
       <h2><b>{{location.title}}</b></h2>
       <p><b>{{location.address}} [ latitude: {{location.latitude}} and longitude= {{location.longitude}} ]</b></p>
     </ion-item>
