@@ -1,5 +1,5 @@
 <!--
-  Generated template for the AddLocationPage page.
+  Generated template for the Add Location Page page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,12 +7,43 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>AddLocation</ion-title>
+    <ion-title>Add Location</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <form>
+        <ion-list>
+            <ion-item>
+              <div *ngIf="error">
+                <p>{{error}}</p>
+              </div>
+            </ion-item>
+            <ion-item>
+              <ion-label fixed>Title:</ion-label>
+              <ion-input [(ngModel)]="form.title" name="title" type="text"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+                <ion-label fixed>Address:</ion-label>
+                <ion-input [(ngModel)]="form.address" name="address" type="text" placeholder="Type address here"></ion-input>
+                <button (click)="Search()" ion-button clear item-right>Find</button>
+               </ion-item>
+         
+            <ion-item>
+          
+               <button ion-button block large (click)="Save()">Save</button>
+            </ion-item>
+          </ion-list>
+    </form>
 
-</ion-content>
+
+    <div style="height: 100%; min-height:100px; display:block;" id="mymap"></div>
+
+  </ion-content>
+
+
+  
+

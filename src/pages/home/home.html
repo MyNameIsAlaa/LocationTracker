@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton="true">
     <ion-title>
       My Locations
     </ion-title>
@@ -8,20 +8,20 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item (click)="showAlert()">
-      <h3>Don't Know What To Do!</h3>
-      <p>I've had a pretty messed up day. If we just...</p>
+    <ion-item text-wrap *ngFor="let location of locations">
+      <h2>{{location.title}}</h2>
+      <p>{{location.address}} [ latitude: {{location.latitude}} and longitude= {{location.longitude}} ]</p>
     </ion-item>
   </ion-list>
 </ion-content>
 
 
 <ion-footer>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-buttons>
-        <button ion-button icon-right color="royal">
+        <button ion-button icon-right color="royal" (click)="AddPage()"> 
             add location
-          <ion-icon name="send"></ion-icon>
+          <ion-icon name="ios-locate-outline"></ion-icon>
         </button>
       </ion-buttons>
     </ion-toolbar>
