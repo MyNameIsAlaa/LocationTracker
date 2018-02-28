@@ -7,7 +7,11 @@
 </ion-header>
 
 <ion-content padding>
+ 
   <ion-list>
+    <ion-item *ngIf="(locations | async)?.length === 0">
+      <h2><b>No locations defined yet.</b></h2>
+    </ion-item>
     <ion-item text-wrap *ngFor="let location of locations | async"  (click)="goEdit(location)">
       <h2><b>{{location.title}}</b></h2>
       <p><b>{{location.address}} [ latitude: {{location.latitude}} and longitude= {{location.longitude}} ]</b></p>
