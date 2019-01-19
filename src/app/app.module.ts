@@ -32,12 +32,12 @@ import {
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBtj43YnduRVKWlOWJksZdSLFvV9X__fhA",
+  apiKey: "",
   authDomain: "locationtracker-a4031.firebaseapp.com",
   databaseURL: "https://locationtracker-a4031.firebaseio.com",
   projectId: "locationtracker-a4031",
   storageBucket: "locationtracker-a4031.appspot.com",
-  messagingSenderId: "718960560850"
+  messagingSenderId: ""
 };
 
 
